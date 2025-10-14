@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+      h1 {
+        color: aqua;
+      }
+      .cred {
+        color: red;
+      }
+      .cpurple {
+        color: purple;
+      }
+      h1.yellow {
+        color: yellow;
+      }
+      [data-x="a"] {
+        color: maroon;
+        background-color: beige;
+      }
+
+      /* SPECIFICITY of this selector is: 
+      1(a) + 10 (harryclass) + 10(rohan-class) + 10(href) + 10(hover) = 41 */
+      a.harryclass.rohan-class[href]:hover {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 style="color: maroon" class="yellow cred cpurple" data-x="a">
+        Class Specificity
+      </h1>
+    </div>
+  </body>
+</html>

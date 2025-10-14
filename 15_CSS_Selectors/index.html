@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* ELEMENT SELECTOR */
+      div {
+        background-color: rebeccapurple;
+      }
+
+      /* <!-- CLASS SELECTOR -- >  */
+      .yellow {
+        background-color: bisque;
+      }
+
+      /* ID SELECTOR */
+      #green {
+        background-color: indianred;
+      }
+
+      /* CHILD SELECTOR */
+      div > p {
+        background-color: greenyellow;
+      }
+
+      /* DESCENDANT SELECTOR --- it's just that <p> should be inside <div> even if it's 
+        inside <article> or anything.*/
+      div p {
+        background-color: magenta;
+      }
+
+      /* UNIVERSAL SELECTOR */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* PSEUDO SELECTOR */
+      a:visited {
+        background-color: yellow;
+      }
+      a:link {
+        background-color: orange;
+      }
+      a:active {
+        background-color: blue;
+      }
+      a:hover{
+        background-color: aquamarine;
+      }
+      p:first-child{
+        background-color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+        <p>i am first child</p>
+        <p>i am second child</p>
+    </main>
+    <div class="yellow">
+      this is div1
+      <p>i am paragraph inside div1</p>
+    </div>
+    <div id="green">
+      this is div2
+      <article>
+        <p>i am para inside div2.</p>
+      </article>
+      <div>
+        <a href="https://www.google.com">Go to Google</a>
+        <a href="https://www.facebook.com">Go to Facebook</a>
+      </div>
+    </div>
+  </body>
+</html>
