@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Float and Clear</title>
+    <style>
+      .cards {
+        border: 2px solid blue;
+        display: flow-root;
+      }
+      .card {
+        border: 2px solid yellowgreen;
+      }
+      .card:nth-child(2) {
+        background-color: aqua;
+        clear: both;
+      }
+      img {
+        float: inline-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <img src="nature2.jpg" />
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium,
+          nemo?
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda,
+          eligendi illum? Natus facilis odio molestias quae recusandae!
+        </p>
+      </div>
+      <div class="card">Card 3</div>
+    </div>
+  </body>
+</html>
